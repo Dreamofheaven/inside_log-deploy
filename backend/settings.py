@@ -9,7 +9,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['port-0-inside-log-jvpb2alnwzgh39.sel5.cloudtype.app']
 INSTALLED_APPS = [
     'base.apps.BaseConfig',
     'django.contrib.admin',
@@ -109,4 +109,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CORS_ALLOWED_ORIGINS = ['https://inside-log-jteuilgdp-dreamofheavens-projects.vercel.app',]
+CORS_ALLOWED_ORIGINS = ['https://inside-log-jteuilgdp-dreamofheavens-projects.vercel.app']
