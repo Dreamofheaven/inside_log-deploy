@@ -1,0 +1,58 @@
+.PostList-box {
+  background-image: url(../../public/images/apple.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 13vh;
+  cursor: pointer;
+  display: grid;
+  text-align: center;
+  position: relative;
+}
+.PostList-box h4 {
+  text-align: center;
+  position: absolute; 
+  top: 30%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 1; 
+  color: white;
+  font-family: 'Poor Story', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 50px;
+}
+.arrow_box {
+  display: none;
+  position: absolute;
+  width: 100px;
+  padding: 8px;
+  top: 30px;
+  left: 0;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+}
+.arrow_box:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #333;
+  border-width: 10px;
+  pointer-events: none;
+  content: ' ';
+}
+@media(hover: hover) and (pointer: fine) {
+  .PostList-box:hover + .arrow_box {
+    display: block;
+  } 
+}

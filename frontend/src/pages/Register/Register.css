@@ -1,0 +1,21 @@
+.register-page {
+    text-align: center;
+    margin-top: 5rem;
+}
+.register-page h1 {
+    font-size: 40px;
+}
+.register-page form {
+    width: 70vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+.register-page input {
+    height: 5vh;
+}
+.register-page button {
+    margin-top: 2rem;
+}

@@ -1,0 +1,79 @@
+.delete-button {
+  top: 10px; 
+  right: 10px; 
+  font-size: 5vw;
+}
+.delete-button:hover {
+  cursor: pointer;
+  color: var(--title-color);
+}
+.detail-page {
+  display: grid;
+  justify-content: center;
+  padding-top: 5vh;
+}
+.detail-page-box {
+  background-color: ivory;
+  border-radius: 10px;
+  width: 80vw;
+  height: 75vh;
+  text-align: center;
+  padding: 25px;
+}
+.detail-page-box2{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.detail-title .num {
+  font-family: 'Righteous', cursive;
+  font-size:2vh;
+}
+.detail-title h2 {
+  font-size: 4vh;
+  font-family: 'Poor Story', sans-serif;
+  color: var(--primary-color);
+}
+.detail-title .date {
+  font-size: 1.5vh;
+  font-family: 'Righteous', cursive; 
+  font-weight: bold;
+  color: var(--title-color);
+}
+.detail-body p{
+  font-size: 2.5vh;
+  font-weight: bold;
+  font-family: 'Orbit', sans-serif;
+}
+.detail-review {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  display: inline-block;
+  max-width: calc(100% - 70px);
+  padding: 10px;
+  margin-top: 3vh;
+  font-size: 1.5vh;
+  border-radius: 10px;
+  margin-left: 20px;
+  background-color: #d0dec7;
+  height: 20vh;
+  overflow: auto;
+}
+.detail-review p {
+  font-family: 'Orbit', sans-serif;
+}
+.icon {
+  font-size: 30px;
+  color: #7A9D54;
+}
+.detail-review::before {
+  position: absolute;
+  display: block;
+  top: 0;
+  font-size: 1.5rem;
+  left: -15px;
+  content: "◀";
+  color: #d0dec7;
+}

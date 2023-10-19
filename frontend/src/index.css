@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'HS-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Nanum+Gothic&family=Orbit&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poor+Story:400');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif, 'HS-Regular';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --primary-color: #557A46;
+  --secondary-color: #7A9D54;
+  --tertiary-color: #F2EE9D;
+  --title-color: #8C3333;
+  --h1-font-family: 'HS-Regular', sans-serif;
+  --border-radius-size: 10px;
+}
+
+h1 {
+  font-family: var(--h1-font-family);
+  color: var(--title-color);
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Nanum+Gothic&family=Orbit&display=swap');
+
+.loading-page {
+    text-align: center;
+}
+.runner-img img {
+    height: 20vh;
+    margin-top: 30vh;
+}
+
+.loading-page h2 {
+    /* margin-top: 10vh; */
+    font-family: 'Orbit', sans-serif;
+    color: grey;
+}
+
+.loading-icon {
+    display: flex;
+    justify-content: center;
+}
+.oval {
+    color:"#ff000";
+    height: 100px;
+    width: 100px;
+}
+
+.footer {
+    margin-top: 100vh;
+}
+.footer p {
+    font-family: 'Nanum Gothic', sans-serif;
+}

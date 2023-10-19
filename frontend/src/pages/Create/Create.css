@@ -1,0 +1,41 @@
+.create-page {
+  display: grid;
+  justify-content: center;
+  padding-top: 5vh;
+}
+.back {
+  color: var(--secondary-color);
+  font-size: 24px;
+  margin: 10px;
+}
+.create-page-box {
+  border-radius: 10px;
+  background-color: ivory;
+  width: 80vw;
+  height: 70vh;
+  text-align: center;
+  padding: 25px;
+}
+.create-page-form-title input {
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+}
+.create-page-form-content textarea {
+  width: 100%;
+  height: 50vh;
+  margin: 5vh 0 3vh 0;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  resize: none;
+}
+.create-page-form-submit {
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+  background-color: var(--secondary-color);
+  font-size: 30px;
+  font-family: var(--h1-font-family);
+  color:beige;
+}

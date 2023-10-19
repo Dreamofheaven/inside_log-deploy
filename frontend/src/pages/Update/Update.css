@@ -1,0 +1,21 @@
+.update-page {
+    text-align: center;
+    margin-top: 5rem;
+}
+.update-page h1 {
+    font-size: 40px;
+}
+.update-page form {
+    width: 70vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+.update-page input {
+    height: 5vh;
+}
+.update-page button {
+    margin-top: 2rem;
+}
