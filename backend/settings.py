@@ -9,7 +9,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
-ALLOWED_HOSTS = ['port-0-inside-log-jvpb2alnwzgh39.sel5.cloudtype.app']
+ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'base.apps.BaseConfig',
     'django.contrib.admin',
