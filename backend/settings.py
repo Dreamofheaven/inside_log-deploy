@@ -67,9 +67,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, 'frontend/build')
-        ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -110,12 +108,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'frontend/build/static'
-]
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CORS_ALLOWED_ORIGINS = ['https://port-0-inside-log-jvpb2alnwzgh39.sel5.cloudtype.app/','https://inside-log-jteuilgdp-dreamofheavens-projects.vercel.app/',]
+CORS_ALLOWED_ORIGINS = ['https://inside-log-jteuilgdp-dreamofheavens-projects.vercel.app/',]
