@@ -50,7 +50,7 @@ def getPostsReview(request,pk):
 @api_view(['POST'])
 def createPostsReview(request,pk):
     post=Post.objects.get(id=pk)
-    comment=completion(f"{post.body}. 답변은 한글로 말해줘.") 
+    comment=completion(f"{post.body}. 답변은 200자 이내로 한글로 위로해주는 말을 해줘.") 
     data=request.data
     now=datetime.now()
     if comment:
