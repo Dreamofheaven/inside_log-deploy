@@ -9,11 +9,19 @@ from datetime import datetime
 import openai
 import os 
 
-openai.api_key= os.getenv("OPENAI_API_KEY")
+# set api key
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+# Call the chat GPT API
 def completion(word):
-    response=openai.ChatCompletion.create(
-    model='gpt-3.5-turbo',
-    messages=[{'role':'user','content': word}])
+    response = openai.ChatCompletion.create(
+        model = 'gpt-3.5-turbo',
+        messages = [
+            {'role': 'system', 'content': '너는 부정적인 언어를 긍정적으로 순화시켜주는 위로와 조언의 동반자이다.'},
+            {'role':'user','content': word}
+        ]
+        # , max_tokens = 300
+    )
     return response['choices'][0]['message']['content'].strip()
 
 @api_view(['GET'])
@@ -49,29 +57,29 @@ def getPostsReview(request,pk):
 
 @api_view(['POST'])
 def createPostsReview(request,pk):
-    post=Post.objects.get(id=pk)
-    comment=completion(f"{post.body}. 답변은 200자 이내로 한글로 위로해주는 말을 해줘.") 
-    data=request.data
-    now=datetime.now()
+    post = Post.objects.get(id=pk)
+    comment = completion(f"{post.body}. 답변은 200자 이내로 한글로 말해줘.") 
+    data = request.data
+    now = datetime.now()
     if comment:
-        content={'detail':'아직 안 풀렸구나. 새로운 문장을 만들어줄게.'}
-        review=Review.objects.filter(post_id=pk).delete() 
-        review=Review.objects.create(
-            post=post, 
-            name='chatgpt',
-            comment=comment,
-            createdAt=now,
+        content = {'detail':'아직 안 풀렸구나. 새로운 문장을 만들어줄게.'}
+        review = Review.objects.filter(post_id=pk).delete() 
+        review = Review.objects.create(
+            post = post, 
+            name = 'chatgpt',
+            comment = comment,
+            createdAt = now,
         )
-        serializer=ReviewSerializer(review, many=False)
+        serializer = ReviewSerializer(review, many=False)
         return Response(serializer.data)
     else: 
-        review=Review.objects.create(
-            post=post,
-            name='chatgpt',
-            comment=comment,
-            createdAt=now,
+        review = Review.objects.create(
+            post = post,
+            name = 'chatgpt',
+            comment = comment,
+            createdAt = now,
         )
-        serializer=ReviewSerializer(review, many=False)
+        serializer = ReviewSerializer(review, many=False)
         return Response(serializer.data)
 
 @api_view(['GET'])
@@ -96,6 +104,6 @@ def updatePosts(request, pk):
 
 @api_view(['DELETE'])
 def deletePosts(request, pk):
-    post=Post.objects.get(id=pk)
+    post = Post.objects.get(id=pk)
     post.delete()
     return Response('Post Deleted')
